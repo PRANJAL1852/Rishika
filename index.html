@@ -7,36 +7,52 @@
     <style>
         /* Global Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f5e1da; /* Soft pastel background */
             color: #333;
             scroll-behavior: smooth;
         }
         
+        /* Title with RGB Effect */
+        .rgb-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            padding: 20px;
+            background: black;
+            color: white;
+            text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.8);
+            animation: rgbEffect 5s infinite;
+        }
+
         /* Navbar */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: rgba(25, 25, 112, 0.9);
+            background: linear-gradient(90deg, #6a0dad, #ffcc00); /* Purple to Gold */
             padding: 15px 0;
             text-align: center;
             z-index: 1000;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
         
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 20px;
             font-size: 18px;
             font-weight: bold;
             transition: 0.3s;
         }
         
         nav a:hover {
-            color: #ffcc00;
+            color: #6a0dad; /* Purple */
+            background-color: #ffcc00; /* Gold */
+            padding: 5px 10px;
+            border-radius: 5px;
         }
 
         /* Sections */
@@ -44,11 +60,12 @@
             padding: 80px 15%;
             min-height: 100vh;
             transition: 0.5s;
+            border-radius: 10px;
         }
 
         .hero {
             text-align: center;
-            background: url('https://source.unsplash.com/1600x900/?girl,nature') no-repeat center;
+            background: url('https://source.unsplash.com/1600x900/?girl,flowers') no-repeat center;
             background-size: cover;
             color: white;
             padding-top: 120px;
@@ -61,24 +78,26 @@
         }
 
         .hero p {
-            font-size: 20px;
-            font-weight: lighter;
+            font-size: 22px;
+            font-weight: bold;
         }
 
-        /* About Section */
-        .about, .education, .interests, .favorites, .contact {
-            background-color: white;
+        /* Other Sections */
+        .about, .education, .interests, .favorites {
+            background: linear-gradient(135deg, #ffcc00, #ff69b4); /* Gold to Pink */
+            color: white;
             border-radius: 10px;
-            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
-            margin: 20px 0;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            margin: 30px 0;
             padding: 40px;
         }
 
         .section-title {
-            font-size: 32px;
+            font-size: 35px;
             font-weight: bold;
             text-align: center;
-            color: #191970;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
 
         .content {
@@ -87,26 +106,23 @@
             text-align: justify;
         }
 
-        /* Contact Section */
-        .contact a {
-            text-decoration: none;
-            color: #191970;
-            font-weight: bold;
-            display: inline-block;
-            margin: 10px 0;
-        }
-
         /* Footer */
         footer {
             text-align: center;
             padding: 15px;
-            background-color: #191970;
+            background: linear-gradient(90deg, #6a0dad, #ff69b4); /* Purple to Pink */
             color: white;
+            font-weight: bold;
         }
 
     </style>
 </head>
 <body>
+
+    <!-- RGB Animated Title -->
+    <div class="rgb-title" id="rgbTitle">
+        Rishika Srivastava - Life of a Queen 👑
+    </div>
 
     <!-- Navbar -->
     <nav>
@@ -115,7 +131,6 @@
         <a href="#education">Education</a>
         <a href="#interests">Interests</a>
         <a href="#favorites">Favorites</a>
-        <a href="#contact">Contact</a>
     </nav>
 
     <!-- Hero Section -->
@@ -152,53 +167,33 @@
     <section id="favorites" class="favorites">
         <h2 class="section-title">Favorites</h2>
         <p class="content">
-            <b>Favorite Book:</b> Too Good to Be True<br>
-            <b>Favorite Author:</b> Jane Austen<br>
-            <b>Favorite Movie:</b> Yeh Jawani Hai Deewani<br>
-            <b>Favorite YouTuber:</b> Prajakta Koli<br>
-            <b>Favorite Food:</b> Paneer Chilli<br>
-            <b>Favorite Drink:</b> Lassi<br>
-            <b>Favorite Color:</b> Lavender<br>
-            <b>Favorite Sport:</b> Badminton<br>
-            <b>Favorite Festival:</b> Holi<br>
-            <b>Favorite Weather:</b> Rainy<br>
-        </p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2 class="section-title">Contact</h2>
-        <p class="content">
-            <b>Email:</b> <a href="mailto:rishika@example.com">rishika@example.com</a><br>
-            <b>Instagram:</b> <a href="https://instagram.com/rishika" target="_blank">@rishika</a><br>
+            <b>📖 Favorite Book:</b> Too Good to Be True<br>
+            <b>🖋 Favorite Author:</b> Jane Austen<br>
+            <b>🎬 Favorite Movie:</b> Yeh Jawani Hai Deewani<br>
+            <b>🎥 Favorite YouTuber:</b> Prajakta Koli<br>
+            <b>🍲 Favorite Food:</b> Paneer Chilli<br>
+            <b>🥤 Favorite Drink:</b> Lassi<br>
+            <b>💜 Favorite Color:</b> Lavender<br>
+            <b>🏸 Favorite Sport:</b> Badminton<br>
+            <b>🎉 Favorite Festival:</b> Holi<br>
+            <b>☔ Favorite Weather:</b> Rainy<br>
         </p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>Made with ❤️ by Pranjal Srivastava</p>
+        <p>Made with ❤️ by 𝓟𝓻𝓪𝓷𝓳𝓪𝓵 𝓢𝓻𝓲𝓿𝓪𝓼𝓽𝓪𝓿𝓪</p>
     </footer>
+
+    <!-- JavaScript for RGB Effect -->
+    <script>
+        function changeColor() {
+            let title = document.getElementById("rgbTitle");
+            let randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+            title.style.color = randomColor;
+        }
+        setInterval(changeColor, 700); // Change color every 0.7 seconds
+    </script>
 
 </body>
 </html>
-
-
----
-
-How to Use:
-
-1. Copy the entire code.
-
-
-2. Paste it into a .html file (e.g., index.html).
-
-
-3. Open the file in a browser.
-
-
-4. Enjoy the world-class bio website!
-
-
-
-Would you like any modifications, animations, or additional features?
-
